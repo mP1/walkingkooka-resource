@@ -22,6 +22,13 @@ import walkingkooka.reflect.PublicStaticHelper;
 public final class TextResources implements PublicStaticHelper {
 
     /**
+     * {@see ClassPathTextResource}
+     */
+    public static TextResource classPath(final String filename, final Class<?> klass) {
+        return ClassPathTextResource.with(filename, klass);
+    }
+
+    /**
      * Stop creation
      */
     private TextResources() {
