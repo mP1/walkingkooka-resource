@@ -21,7 +21,6 @@ import org.junit.jupiter.api.Test;
 import walkingkooka.reflect.ClassTesting2;
 import walkingkooka.reflect.JavaVisibility;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public final class ClassPathTextResourceTest implements ClassTesting2<ClassPathTextResource> {
@@ -29,7 +28,7 @@ public final class ClassPathTextResourceTest implements ClassTesting2<ClassPathT
     @Test
     public void testText() {
         final ClassPathTextResource loader = ClassPathTextResource.with(ClassPathTextResourceTest.class.getSimpleName() + "/testLoad.txt", this.getClass());
-        assertEquals("ABC123", loader.text());
+        this.checkEquals("ABC123", loader.text());
     }
 
     @Test
