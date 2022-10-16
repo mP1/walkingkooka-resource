@@ -35,10 +35,10 @@ public final class ClassPathTextResource implements TextResource {
      * Factory that creates a new {@link ClassPathTextResource}
      */
     static ClassPathTextResource with(final String filename, final Class<?> klass) {
-        CharSequences.failIfNullOrEmpty(filename, "filename");
-        Objects.requireNonNull(klass, "class");
-
-        return new ClassPathTextResource(filename, klass);
+        return new ClassPathTextResource(
+                CharSequences.failIfNullOrEmpty(filename, "filename"),
+                Objects.requireNonNull(klass, "class")
+        );
     }
 
     /**
