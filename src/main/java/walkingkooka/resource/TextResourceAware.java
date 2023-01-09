@@ -32,10 +32,10 @@ public @interface TextResourceAware {
     /**
      * Normalizes space, which basically collapses sequences of multiple whitespace characters into a single space.
      */
-    public boolean normalizeSpace() default false;
+    boolean normalizeSpace() default false;
 
     /**
      * Support for providing an alternative file extension for the resource.
      */
-    public String fileExtension() default "txt";
+    String fileExtension() default "txt";
 }
