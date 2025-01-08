@@ -27,15 +27,15 @@ public class TestGwtTest extends GWTTestCase {
 
     public void testAssertEquals() {
         assertEquals(
-                1,
-                1
+            1,
+            1
         );
     }
 
     public void testTextResource() {
         assertEquals(
-                "Hello",
-                new TestTextResource().text()
+            "Hello",
+            new TestTextResource().text()
         );
     }
 }
