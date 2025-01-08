@@ -36,8 +36,8 @@ public final class ClassPathTextResource implements TextResource {
      */
     static ClassPathTextResource with(final String filename, final Class<?> klass) {
         return new ClassPathTextResource(
-                CharSequences.failIfNullOrEmpty(filename, "filename"),
-                Objects.requireNonNull(klass, "class")
+            CharSequences.failIfNullOrEmpty(filename, "filename"),
+            Objects.requireNonNull(klass, "class")
         );
     }
 
